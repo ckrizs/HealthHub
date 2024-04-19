@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
-
+  devise_for :doctors, controllers: { registrations: 'doctors/registrations' , sessions: 'doctors/sessions' }
+  devise_for :patients, controllers: { registrations: 'patients/registrations' , sessions: 'patients/sessions' }
   # Визначення маршруту для головної сторінки
   root "home#index"  # Цей рядок визначає, що головна сторінка буде рендеритися за допомогою методу index контролера home
 
